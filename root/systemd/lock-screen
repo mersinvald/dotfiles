@@ -1,0 +1,7 @@
+[Unit]
+Type=oneshot
+Description=Lock screen
+
+[Service]
+ExecStart=/bin/bash -c {{ xsecurelock-command }}
+User={{ env_var "USERNAME" }}

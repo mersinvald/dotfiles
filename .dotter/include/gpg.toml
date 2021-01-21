@@ -1,0 +1,4 @@
+# the default gpg key
+
+[shell.variables]
+git-signingKey = "90481D57F0E44CA850B76218569C4CA9C8549E46"

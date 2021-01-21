@@ -1,0 +1,60 @@
+[shell.files]
+# Local variables: git-name, git-email
+todorc = "~/.todorc"
+git = "~/.gitconfig"
+profile = "~/.profile"
+"scripts/env" = "~/.scripts/env"
+"scripts/shell" = "~/.scripts/shell"
+
+[shell.variables]
+# Local variables: install, uninstall, update, autoremove
+install = "echo not defined"
+uninstall = "echo not defined"
+update = "echo not defined"
+
+[zsh.files]
+# requires "shell", conflicts with "bash"
+zshrc = "~/.zshrc"
+antigen = "~/.antigen/antigen.zsh"
+
+[cargo.files]
+cargo = "~/.cargo/config"
+
+[gpg.files]
+# requires "shell"
+gnupg = { target = "~/.gnupg", type = "symbolic" }
+gpg-agent = "~/.gnupg/gpg-agent.conf"
+
+[gpg.variables]
+pinentry-program = "/usr/bin/pinentry-curses"
+
+[graphics.files]
+# Optional local variables: xsecurelock-saver
+"scripts/graphics" = "~/.scripts/graphics"
+
+[graphics.variables]
+xsecurelock-command = "~/.scripts/graphics/xsecurelock"
+
+[graphics.variables.font]
+monospace = "Fira Code"
+size = 9
+
+[i3.files]
+# requires "graphics"
+# Local variables: terminal
+i3 = "~/.config/i3/config"
+
+[alacritty.files]
+alacritty = "~/.config/alacritty/alacritty"
+
+[alacritty.variables]
+terminal = "alacritty"
+
+[yubikey.files]
+u2f_keys = "~/.config/Yubico/u2f_keys"
+
+[udev.files]
+"root/udev" = { target = "~/.deploy/udev", type = "template" }
+
+[systemd.files]
+"root/systemd" = { target = "~/.deploy/systemd", type = "template" }

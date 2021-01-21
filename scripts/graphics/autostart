@@ -1,0 +1,17 @@
+#!/bin/bash
+
+setxkbmap -model pc104 -layout us,ru -option grp:caps_toggle
+
+xss-lock --transfer-sleep-lock -n /use/lib/xsecurelock/dimmer -l -- {{ xsecurelock-command }} &
+~/.screenlayout/default.sh &
+pulseaudio --start &
+
+{{#if (is_executable "nm-applet")~}}
+nm-applet &
+{{/if~}}
+
+{{#if (is_executable "blueman-applet")~}}
+blueman-applet &
+{{/if~}}
+
+disown -a 

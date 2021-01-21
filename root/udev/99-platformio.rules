@@ -1,0 +1,1 @@
+{{ http_get "https://raw.githubusercontent.com/platformio/platformio-core/master/scripts/99-platformio-udev.rules" }}

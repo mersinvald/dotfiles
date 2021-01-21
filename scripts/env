@@ -1,0 +1,9 @@
+{{#if dotter.packages.graphics~}}
+export PATH="$HOME/scripts/graphics:$PATH"
+
+{{/if~}}
+
+{{#if dotter.packages.shell~}}
+export PATH="$HOME/scripts/shell:$PATH"
+
+{{/if~}}

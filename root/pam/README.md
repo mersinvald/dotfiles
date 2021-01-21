@@ -1,0 +1,1 @@
+see https://wiki.archlinux.org/index.php/Universal_2nd_Factor#Authentication_for_Arch_Linux

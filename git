@@ -1,0 +1,26 @@
+[init]
+	defaultBranch = master
+
+[user]
+	name = {{ git-name }}
+	email = {{ git-email }}
+	{{#if dotter.packages.gpg~}}
+    signingKey = {{ git-signingKey }}
+{{/if~}}
+
+
+[core]
+	{{#if (is_executable "delta")~}}
+	pager = delta --dark
+{{/if~}}
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+
+{{#if dotter.packages.gpg~}}
+[commit]
+	gpgSign = true
+{{/if~}}
