@@ -2,7 +2,7 @@
 
 This repo holds every piece of common configuration for my workstations.
 
-The dotfiles templating is powered by an awesome [dotter](https://github.com/SuperCuber/dotter), with some scripts to manage the root configuration files on top of that (systemd services, udev rules, etc).
+The dotfiles templating is powered by the awesome [dotter](https://github.com/SuperCuber/dotter), with some scripts to manage the root configuration files on top of that (systemd services, udev rules, etc).
 
 To see how to apply those dotfiles, see the dotter documentation. Below you can find format descripton for the systemd services and udev rules.
 
