@@ -24,6 +24,7 @@ cargo = "~/.cargo/config"
 # requires "shell"
 gnupg = { target = "~/.gnupg", type = "symbolic" }
 gpg-agent = "~/.gnupg/gpg-agent.conf"
+"scripts/gpg" = "~/.scripts/gpg"
 
 [gpg.variables]
 pinentry-program = "/usr/bin/pinentry-curses"

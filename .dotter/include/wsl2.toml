@@ -1,0 +1,2 @@
+[shell.variables]
+is_wsl2 = true

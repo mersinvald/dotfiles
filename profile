@@ -62,10 +62,20 @@ alias rust-musl='docker run --rm -it -v "$PWD":/home/rust/src ekidd/rust-musl-bu
 
 {{#if dotter.packages.gpg~}}
 # gpg-agent
+
+{{#if is_wsl2~}}
+# WSL2 gpg relay (https://blog.nimamoh.net/yubi-key-gpg-wsl2/)
+gpg-agent-relay start
+export SSH_AUTH_SOCK=$HOME/.gnupg/S.gpg-agent.ssh
+
+{{else~}}
+# Any native Linux
 export GPG_TTY="$(tty)"
-export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
+export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpg-connect-agent updatestartuptty /bye > /dev/null
+
+{{/if~}}
 
 # Sometimes key refuses to sign the messages after some time with the session being open
 # but gpg-agent does not reset the session, hence some ducttape here
