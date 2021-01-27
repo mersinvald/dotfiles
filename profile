@@ -34,6 +34,13 @@ cd ()
     {{/if~}}
 }
 
+# Sorted diff
+function diffs()
+{
+    diff "${@:3}" <(sort "$1") <(sort "$2")
+}
+
+
 {{#if (is_executable "bat")~}}
 # cat
 alias cat="bat"
@@ -41,6 +48,7 @@ alias cat="bat"
 {{/if~}}
 
 {{#if (is_executable "thefuck")~}}
+
 # fuck
 eval $(thefuck --alias)
 
