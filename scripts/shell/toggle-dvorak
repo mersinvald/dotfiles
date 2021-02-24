@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if [ -f /tmp/dvorak ]; then
+    rm /tmp/dvorak
+    setxkbmap -model pc104 -layout us,ru -option grp:caps_toggle
+else
+    touch /tmp/dvorak
+    setxkbmap -model pc104 -layout us,ru -variant dvp, -option grp:caps_toggle
+fi
