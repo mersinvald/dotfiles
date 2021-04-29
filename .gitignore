@@ -1,3 +1,4 @@
 local.toml
 .dotter/cache/
 .dotter/cache.toml
+.dotter/include/hid-server.toml

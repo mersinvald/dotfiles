@@ -1,0 +1,1 @@
+{{ env_var "USERNAME" }} ALL = (root) NOPASSWD:SETENV: /home/{{ env_var "USERNAME" }}/.cargo/bin/hid_server

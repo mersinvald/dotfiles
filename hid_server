@@ -1,0 +1,26 @@
+vid = 0x3297
+pid = 0x1969
+usage = { page = 0xFF60, id = 0x61 }
+
+[support]
+print_to = "stdout"
+
+[telemetry]
+storage_directory = "{{ telemetry_storage_directory }}"
+
+[telemetry.sniff]
+matrix = true
+layer = true
+input = true
+
+[telemetry.push]
+all = false
+metrics = []
+
+[telemetry.s3]
+region = "{{ telemetry_s3_region }}"
+endpoint = "{{ telemetry_s3_endpoint }}"
+bucket = "telemetry"
+root = "/session"
+access_key = "{{ telemetry_s3_access_key }}"
+secret_key = "{{ telemetry_s3_secret_key }}"

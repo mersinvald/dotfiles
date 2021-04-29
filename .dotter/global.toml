@@ -59,3 +59,8 @@ u2f_keys = "~/.config/Yubico/u2f_keys"
 
 [systemd.files]
 "root/systemd" = { target = "~/.deploy/systemd", type = "template" }
+
+[hid-server.files]
+# depends on cargo
+"root/sudoers/hid-server" = "~/.deploy/sudoers/hid-server"
+hid_server = "~/.config/hid_server/hid_server.toml"

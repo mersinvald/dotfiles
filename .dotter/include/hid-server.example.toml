@@ -1,0 +1,6 @@
+[hid-server.variables]
+telemetry_storage_directory = "DIRECTORY TO TEMPORARILY STORE TELEMETRY DATA"
+telemetry_s3_region = "S3 REGION"
+telemetry_s3_endpoint = "S3 ENDPOINT"
+telemetry_s3_access_key = "S3 ACCESS KEY"
+telemetry_s3_secret_key = "S3 SECRET KEY"

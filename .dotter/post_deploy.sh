@@ -29,3 +29,23 @@ if [ -d  ~/.deploy/udev ]; then
     done
     sudo udevadm control --reload-rules
 fi
+
+# Deploy sudoers rules
+if [ -d  ~/.deploy/sudoers ]; then 
+    mkdir -p /etc/sudoers.d
+    sudo touch /etc/sudoers.d/README
+    for rule in ~/.deploy/sudoers/*; do
+        sudo cp $rule /etc/sudoers.d/ -v
+    done
+    sudo chmod -R 0440 /etc/sudoers.d/
+fi
+
+
+{{#if dotter.packages.hid-server~}}
+if [ ! -f ~/.cargo/bin/hid_server ]; then 
+    git clone git@github.com:mersinvald/hid-server.git /tmp/hid-server
+    pushd /tmp/hid-server
+    cargo install -f --path .
+    popd
+fi
+{{/if~}}

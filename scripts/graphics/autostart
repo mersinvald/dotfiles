@@ -14,4 +14,13 @@ nm-applet &
 blueman-applet &
 {{/if~}}
 
+{{#if  dotter.packages.hid-server~}}
+if [ -z "$(pidof hid_server)" ]; then
+    mv ~/.hid_server.current ~/.hid_server.previous
+    sudo -E hid_server |& tee ~/.hid_server.current &
+else
+    echo "hid_server is already running"
+fi
+{{/if~}}
+
 disown -a 
