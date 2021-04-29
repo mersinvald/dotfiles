@@ -92,3 +92,11 @@ alias scp="gpg-connect-agent updatestartuptty /bye > /dev/null; scp"
 alias git="gpg-connect-agent updatestartuptty /bye > /dev/null; git"
 
 {{/if~}}
+
+{{#if (is_executable "/opt/texlive/2021/bin/x86_64-linux/tex")~}}
+# texlive
+export PATH="$PATH:/opt/texlive/2021/bin/x86_64-linux"
+export MANPATH="$MANPATH:/opt/texlive/2021/texmf-dist/doc/man"
+export INFOPATH="$INFOPATH:/opt/texlive/2021/texmf-dist/doc/info"
+
+{{/if~}}
