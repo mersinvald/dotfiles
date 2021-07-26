@@ -100,3 +100,5 @@ export MANPATH="$MANPATH:/opt/texlive/2021/texmf-dist/doc/man"
 export INFOPATH="$INFOPATH:/opt/texlive/2021/texmf-dist/doc/info"
 
 {{/if~}}
+
+export PATH="$PATH:$HOME/.local/bin"
