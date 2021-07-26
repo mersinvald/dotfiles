@@ -1,0 +1,2 @@
+SUBSYSTEM=="usb", SYSFS{idVendor}=="3297", SYSFS{idProduct}=="1969", ACTION=="add", GROUP="hid", MODE="0664"
+KERNEL=="hidraw*", ATTRS{busnum}=="1", ATTRS{idVendor}=="3297", ATTRS{idProduct}=="1969", GROUP="hid", MODE="0664"
