@@ -49,3 +49,17 @@ if [ ! -f ~/.cargo/bin/hid_server ]; then
     popd
 fi
 {{/if~}}
+
+
+{{#if dotter.packages.tmux~}}
+if [ ! -d ~/.config/tmux/plugins/tpm ]; then 
+    git clone https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+fi
+{{/if~}}
+
+{{#if dotter.packages.neovim~}}
+if [ ! -d ~/.local/share/nvim/site/pack/packer/start/packer.nvim ]; then
+    git clone --depth 1 https://github.com/wbthomason/packer.nvim \
+        ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+fi  
+{{/if~}}

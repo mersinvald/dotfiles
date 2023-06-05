@@ -12,3 +12,5 @@ export PATH="$HOME/.scripts/shell:$PATH"
 export PATH="$HOME/.scripts/gpg:$PATH"
 
 {{/if~}}
+
+source "$HOME/.scripts/util/env"

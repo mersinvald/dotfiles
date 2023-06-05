@@ -16,7 +16,7 @@ antigen bundle DarrinTisdale/zsh-aliases-exa
 antigen bundle unixorn/autoupdate-antigen.zshplugin
 
 # Load the theme
-antigen theme miloshadzic
+antigen theme https://github.com/denysdovhan/spaceship-zsh-theme spaceship
 
 antigen apply
 

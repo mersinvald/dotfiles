@@ -54,15 +54,18 @@ eval $(thefuck --alias)
 
 {{/if~}}
 
-# Terminal color
-export TERM=xterm-256color
+{{#if (is_executable "nvim")~}}
+# Neovim
+alias vim="nvim"
+
+{{/if~}}
 
 # Source the scripts environment file
 source $HOME/.scripts/env
 
 {{#if dotter.packages.cargo~}}
 # Rust
-export PATH="$HOME/.cargo/bin:$PATH"
+soruce $HOME/.cargo/env
 alias rust-esp='docker run --rm -ti -v "$PWD":/home/project:z quay.io/ctron/rust-esp'
 alias rust-musl='docker run --rm -it -v "$PWD":/home/rust/src ekidd/rust-musl-builder'
 
@@ -102,3 +105,8 @@ export INFOPATH="$INFOPATH:/opt/texlive/2021/texmf-dist/doc/info"
 {{/if~}}
 
 export PATH="$PATH:$HOME/.local/bin"
+
+{{#if (is_executable "brew")~}}
+eval "$(brew shellenv)"
+{{/if~}}
+
