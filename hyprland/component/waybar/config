@@ -1,0 +1,75 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 26, // Waybar height (to be removed for auto height)
+    //"width": 1600, // Waybar width
+    "spacing": 4, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "margin-top": 4,
+    "margin-bottom": 4,
+    "margin-left": 6,
+    "margin-right": 6,
+    "modules-left": ["wlr/workspaces"], 
+    "modules-center": [],
+    "modules-right": ["tray", "idle_inhibitor", "battery", "clock"], 
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "wlr/workspaces": {
+        "format": "{name}  {icon}",
+        "on-scroll-up": "hyprctl dispatch workspace e+1",
+        "on-scroll-down": "hyprctl dispatch workspace e-1",
+        "on-click": "activate",
+        "sort-by-name": "false",
+        "sort-by-number": "true",
+        "format-icons": {
+            "1": "<span font='Font Awesome 5 Free 11'></span>",
+            "2": "<span font='Font Awesome 5 Free 11'></span>",
+            "3": "<span font='Font Awesome 5 Free 11'></span>",
+            "4": "<span font='Font Awesome 5 Free 11'></span>",
+            "5": "<span font='Font Awesome 5 Free 11'></span>",
+            "6": "<span font='Font Awesome 5 Free 11'></span>",
+            "7": "<span font='Font Awesome 5 Free 11'></span>",
+            "8": "<span font='Font Awesome 5 Free 11'></span>",
+            "9": "<span font='Font Awesome 5 Free 11'></span>",
+            "10": "<span font='Font Awesome 5 Free 11'></span>"
+        }
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        "icon-size": 13,
+        "spacing": 8
+    },
+    "clock": {
+        "timezone": "Asia/Dubai",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "states": {
+            //"good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        "format-good": "", // An empty format will hide the module
+        "format-full": "",
+        "format-icons": ["", "", "", "", ""]
+    }
+}
+

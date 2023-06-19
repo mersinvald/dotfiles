@@ -1,0 +1,16 @@
+/* Label Color. Config default is white. */
+label {
+    color:          white;
+}
+
+/* Button Configuration */
+button {
+    font-weight:    normal;
+    border:         none;
+    box-shadow:     none;
+    margin-bottom: -8px;
+    margin-top:    -8px;
+    padding-right:  0;
+    padding-left:   0;
+}
+

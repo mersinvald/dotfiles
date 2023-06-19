@@ -1,0 +1,130 @@
+* {
+    border: none;
+    border-radius: 0px;
+    font-family: "SF Pro Display", Cantarell, Noto Sans, sans-serif;
+    font-size: 11px;
+    min-height: 0;
+    padding: 0;
+    margin: -1;
+}
+
+#window {
+    padding: 0 10px;
+}
+
+window#waybar {
+    border: none;
+    border-radius: 9px 9px 0 0;
+    box-shadow: none;
+    text-shadow: none;
+    transition-duration: 0s;
+    color: rgba(217, 216, 216, 1);
+    background-color: transparent; 
+} 
+
+#workspaces {
+    margin: 0 5px 0 5px;
+    padding: 0 5px 0 5px;
+    border-radius: 16px;
+    border: 3px solid rgba(9, 85, 255, 0);
+    background: #1a1b26;
+}
+
+#workspaces button {
+    padding: 0 8px;
+    background-color: transparent;
+    color: #565f89;
+    border: 3px solid rgba(9, 85, 225, 0);
+    border-radius: 0px;
+    min-width: 32px;
+}
+
+#workspaces button.visible {
+    color: #a9b1d6;
+}
+
+#workspaces button.active {
+    border-bottom: 3px solid #7aa2f7;
+}
+
+#workspaces button.urgent {
+    background-color: #a96d1f;
+    color: white;
+}
+
+#workspaces button:hover {
+    color: white;
+}
+
+/* Repeat style here to ensure properties are overwritten as there's no !important and button:hover above resets the colour */
+
+#workspaces button.active {
+    color: #7aa2f7;
+}
+#workspaces button.focused:hover {
+    color: #bb9af7;
+}
+
+
+#tray,
+#mode,
+#battery,
+#temperature,
+#clock,
+#cpu,
+#memory,
+#network,
+#pulseaudio,
+#idle_inhibitor,
+#sway-language,
+#backlight,
+#custom-storage,
+#custom-cpu_speed,
+#custom-powermenu,
+#custom-spotify,
+#custom-weather,
+#custom-mail,
+#custom-media {
+    margin: 0 0px 0 0px;
+    padding: 0 10px 0 10px;
+    background: #1a1b26;
+    border-radius: 16px;
+}
+
+#tray {
+}
+
+#clock {
+    margin: 0 5px 0 0;
+}
+
+#battery {
+    padding: 0 16px 0 10px;
+}
+
+#battery.warning {
+    color: rgba(255, 210, 4, 1);
+}
+
+#battery.critical {
+    color: rgba(238, 46, 36, 1);
+}
+
+#battery.charging {
+    color: rgba(217, 216, 216, 1);
+}
+
+#custom-storage.warning {
+    color: rgba(255, 210, 4, 1);
+}
+
+#custom-storage.critical {
+    color: rgba(238, 46, 36, 1);
+}
+
+@keyframes blink {
+    to {
+        background-color: #ffffff;
+        color: black;
+    }
+}

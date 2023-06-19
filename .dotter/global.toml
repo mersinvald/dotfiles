@@ -5,6 +5,7 @@ git = "~/.gitconfig"
 profile = "~/.profile"
 "scripts/env" = "~/.scripts/env"
 "scripts/shell" = "~/.scripts/shell"
+"scripts/util" = "~/.scripts/util"
 
 [shell.variables]
 # Local variables: install, uninstall, update, autoremove
@@ -44,14 +45,20 @@ pinentry-program = "/usr/bin/pinentry-curses"
 [graphics.variables]
 xsecurelock-command = "~/.scripts/graphics/xsecurelock"
 
-[graphics.variables.font]
-monospace = "Fira Code"
-size = 9
-
 [i3.files]
 # requires "graphics"
 # Local variables: terminal
 i3 = "~/.config/i3/config"
+
+[hyprland.files]
+"hyprland/config" = "~/.config/hypr"
+"hyprland/scripts" = "~/.scripts/hypr"
+"hyprland/component/waybar" = "~/.config/waybar/"
+"hyprland/component/hybrid" = "~/.config/HybridBar/" 
+"hyprland/component/eww"    = "~/.config/eww/"
+
+[wofi.files]
+"wofi/" = "~/.config/wofi"
 
 [alacritty.files]
 # conflicts with "kitty"
