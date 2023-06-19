@@ -19,7 +19,7 @@ antigen = "~/.antigen/antigen.zsh"
 
 [tmux.files]
 # requires "shell"
-tmux = "~/.config/tmux"
+tmux = { target = "~/.config/tmux", type = "template" }
 
 [neovim.files]
 # requires "shell"
