@@ -28,4 +28,4 @@ if [ ! -d ~/.dotfiles ]; then
 fi
 
 # Run dotter
-
+dotter deploy
