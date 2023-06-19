@@ -1,4 +1,4 @@
 [shell.variables]
-install = "yay -S"
-uninstall = "yay -R"
-update = "yay -Suy"
+install = "paru -S"
+uninstall = "paru -R"
+update = "paru -Suy"
