@@ -40,6 +40,14 @@ if [ -d  ~/.deploy/sudoers ]; then
     sudo chmod -R 0440 /etc/sudoers.d/
 fi
 
+# Deploy modprobe.d files
+if [ -d ~/.deploy/modprobe.d ]; then
+    for conf in ~/.deploy/modprobe.d/*; do
+        sudo cp $conf /etc/modprobe.d/ -v
+    done
+    sudo mkinitcpio -P 
+fi
+
 
 {{#if dotter.packages.hid-server~}}
 if [ ! -f ~/.cargo/bin/hid_server ]; then 

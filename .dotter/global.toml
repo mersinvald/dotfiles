@@ -80,3 +80,6 @@ u2f_keys = "~/.config/Yubico/u2f_keys"
 # depends on cargo
 "root/sudoers/hid-server" = "~/.deploy/sudoers/hid-server"
 hid_server = "~/.config/hid_server/hid_server.toml"
+
+[apple.files]
+"root/modprobe.d/hid_apple.conf" = "~/.deploy/modprobe.d/hid_apple.conf"
