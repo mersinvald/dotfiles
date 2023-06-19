@@ -3,14 +3,14 @@
 # Any items in the `env` entry below will be added as
 # environment variables. Some entries may override variables
 # set by alacritty itself.
-#env:
+env:
   # TERM variable
   #
   # This value is used to set the `$TERM` environment variable for
   # each instance of Alacritty. If it is not present, alacritty will
   # check the local terminfo database and use `alacritty` if it is
   # available, otherwise `xterm-256color` is used.
-  #TERM: xterm-256color
+  TERM: alacritty
 
 window:
   dynamic_title: true
@@ -367,8 +367,8 @@ live_config_reload: true
 #   - (macOS) /bin/bash --login
 #   - (Linux) user login shell
 #   - (Windows) powershell
-#shell:
-#  program: /bin/bash
+shell:
+  program: {{ shell }}
 #  args:
 #    - --login
 
@@ -518,7 +518,7 @@ key_bindings:
   - { key: Equals,   mods: Control,       action: IncreaseFontSize }
   - { key: Plus,     mods: Control,       action: IncreaseFontSize }
   - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  {{#unless dotter.packages.i3~}}
+  {{#unless dotter.packages.i3}}
   - { key: F,        mods: Alt,           action: ToggleFullscreen }
   {{/unless}}
   {{else~}}
